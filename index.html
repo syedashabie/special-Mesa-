@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Special Someone</title>
+    <style>
+        body { background-color: #ffeef2; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; font-family: 'Poppins', sans-serif; overflow: hidden; }
+        .container { text-align: center; background: white; padding: 40px; border-radius: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); max-width: 400px; }
+        .heart { font-size: 70px; color: #ff4d6d; animation: pulse 1s infinite; }
+        @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.2); } }
+        h1 { color: #d63384; font-size: 28px; margin: 20px 0; }
+        p { color: #555; font-size: 18px; line-height: 1.6; }
+        .buttons { margin-top: 30px; display: flex; justify-content: space-evenly; }
+        .btn { padding: 10px 25px; border: none; border-radius: 50px; font-size: 18px; cursor: pointer; transition: 0.3s; text-decoration: none; }
+        .yes-btn { background-color: #ff4d6d; color: white; }
+        .no-btn { background-color: #ddd; color: #333; }
+        .btn:hover { transform: scale(1.1); box-shadow: 0 5px 15px rgba(255, 77, 109, 0.4); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heart">❤️</div>
+        <h1>Will You Be Mine?</h1>
+        <p>I want to spend every moment with you. You make my life beautiful. ✨</p>
+        <p style="font-weight: bold; color: #ff4d6d;">[Unka Naam Yahan Likhein]</p>
+        <div class="buttons">
+            <button class="btn yes-btn" onclick="alert('Yay! I love you so much! ❤️')">Yes!</button>
+            <button class="btn no-btn" onmouseover="moveButton(this)">No</button>
+        </div>
+    </div>
+
+    <script>
+        function moveButton(btn) {
+            var x = Math.random() * (window.innerWidth - btn.offsetWidth);
+            var y = Math.random() * (window.innerHeight - btn.offsetHeight);
+            btn.style.position = 'absolute';
+            btn.style.left = x + 'px';
+            btn.style.top = y + 'px';
+        }
+    </script>
+</body>
+  </html>
+  
